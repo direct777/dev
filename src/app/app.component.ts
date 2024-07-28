@@ -1,4 +1,3 @@
-// src/app/app.component.ts
 import { Component } from '@angular/core';
 import { RouterLinkActive, RouterOutlet, RouterLink } from '@angular/router';
 import { ViewComponent } from './view/view.component';
@@ -23,4 +22,6 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatButtonModule
   ]
 })
-export class AppComponent {}
+export class AppComponent {
+  title = 'Charts';
+}

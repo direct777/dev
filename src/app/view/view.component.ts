@@ -1,4 +1,3 @@
-// src/app/view/view.component.ts
 import { Component, OnInit, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { ChartDataService } from '../services/chart-data.service';
 import * as Highcharts from 'highcharts';

@@ -1,6 +1,9 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ViewComponent } from './view.component';
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 describe('ViewComponent', () => {
   let component: ViewComponent;
@@ -8,7 +11,16 @@ describe('ViewComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ViewComponent]
+      imports: [
+        ViewComponent,
+        MatDatepickerModule,
+        MatNativeDateModule,
+        NoopAnimationsModule
+      ],
+      providers: [
+        { provide: MatDatepickerModule, useValue: {} },
+        { provide: MatNativeDateModule, useValue: {} }
+      ]
     })
     .compileComponents();
 

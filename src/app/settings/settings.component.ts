@@ -1,4 +1,3 @@
-// src/app/settings/settings.component.ts
 import { Component } from '@angular/core';
 import { MatDialogModule, MatDialog } from '@angular/material/dialog';
 import { ChartDataService } from '../services/chart-data.service'; // Correct import path
