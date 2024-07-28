@@ -1,0 +1,11 @@
+<div class="settings-container">
+  <h2>Chart Settings</h2>
+  <button mat-button (click)="openChartModal()">Add New Chart</button>
+  <div *ngFor="let chart of charts | async">
+    <div class="chart-item">
+      <span>{{ chart.name }}</span>
+      <button mat-button (click)="openChartModal(chart)">Edit</button>
+      <button mat-button (click)="removeChart(chart.id)">Remove</button>
+    </div>
+  </div>
+</div>

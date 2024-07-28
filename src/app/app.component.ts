@@ -1,13 +1,26 @@
+// src/app/app.component.ts
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLinkActive, RouterOutlet, RouterLink } from '@angular/router';
+import { ViewComponent } from './view/view.component';
+import { SettingsComponent } from './settings/settings.component';
+import { CommonModule } from '@angular/common';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @Component({
   selector: 'app-root',
-  standalone: true,
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  standalone: true,
+  imports: [CommonModule,
+    RouterOutlet,
+    ViewComponent,
+    SettingsComponent,
+    RouterLink,
+    RouterLinkActive,
+    MatIconModule,
+    MatToolbarModule,
+    MatButtonModule
+  ]
 })
-export class AppComponent {
-  title = 'dev';
-}
+export class AppComponent {}
